@@ -36,7 +36,7 @@ This is just what I actually implemented in the demo, not if the language/framew
 - [☢️](https://www.rust-lang.org/) - rust
 - [🌙](https://www.lua.org/) - lua
 - [🇨](https://en.cppreference.com/w/c/language) - C/C++
-- [☕](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference) - javascript/typescript/actionscript
+- [☕](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference) - javascript / typescript / actionscript
 - [🐤](https://wren.io/) - wren
 - [🐍](https://www.python.org/) - python
 
