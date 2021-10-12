@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="utf-8">
+
+  <title>::APP_TITLE::</title>
+
+  <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+
+  ::if favicons::::foreach (favicons)::
+  <link rel="::__current__.rel::" type="::__current__.type::" href="::__current__.href::">::end::::end::
+
+  ::if linkedLibraries::::foreach (linkedLibraries)::
+  <script type="text/javascript" src="::__current__::"></script>::end::::end::
+  <script type="text/javascript" src="./::APP_FILE::.js"></script>
+
+  <script>
+    window.addEventListener ("touchmove", function (event) { event.preventDefault (); }, { capture: false, passive: false });
+    if (typeof window.devicePixelRatio != 'undefined' && window.devicePixelRatio > 2) {
+      var meta = document.getElementById ("viewport");
+      meta.setAttribute ('content', 'width=device-width, initial-scale=' + (2 / window.devicePixelRatio) + ', user-scalable=no');
+    }
+  </script>
+
+  <style>
+    html,body { margin: 0; padding: 0; height: 100%; overflow: hidden; }
+    #content { ::if (WIN_BACKGROUND)::background: #000000; ::end::width: ::if (WIN_RESIZABLE)::100%::elseif (WIN_WIDTH > 0)::::WIN_WIDTH::px::else::100%::end::; height: ::if (WIN_RESIZABLE)::100%::elseif (WIN_WIDTH > 0)::::WIN_HEIGHT::px::else::100%::end::; }
+::foreach assets::::if (type == "font")::::if (cssFontFace)::::cssFontFace::::end::::end::::end::
+    #welcome {
+      height: 100%;
+      width: 100%;
+      color:  #fff;
+      display:  flex;
+      align-items:  center;
+      justify-content:  center; 
+      font-family:  sans-serif; 
+      font-size:  30px;
+    }
+  </style>
+
+</head>
+<body>
+  ::foreach assets::::if (type == "font")::
+  <span style="font-family: ::id::"> </span>::end::::end::
+
+  <div id="content"><div id="welcome"><span>Click here to view ::APP_TITLE::.</span></div></div>
+
+  <script type="text/javascript">
+    function setup() {
+      document.getElementById('content').innerHTML = ''
+      lime.embed ("::APP_FILE::", "content", ::WIN_WIDTH::, ::WIN_HEIGHT::);
+      window.removeEventListener('click', setup)
+    }
+    window.addEventListener('click', setup)
+  </script>
+
+</body>
+</html>

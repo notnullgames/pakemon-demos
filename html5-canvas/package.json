@@ -1,0 +1,12 @@
+{
+  "name": "pakemon-canvas",
+  "version": "0.0.0",
+  "description": "This is a few ideas aorund just using regular HTML canvas to get stuff done.",
+  "main": "index.js",
+  "scripts": {
+    "start": "npx live-server"
+  },
+  "keywords": [],
+  "author": "David Konsumer <konsumer@jetboystudio.com>",
+  "license": "MIT"
+}

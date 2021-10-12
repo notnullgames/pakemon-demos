@@ -1,0 +1,11 @@
+[package]
+name = "pakemon-macroquad"
+version = "0.1.0"
+edition = "2018"
+
+[dependencies]
+macroquad = "0.3"
+macroquad_tantan_toolbox = { git = "https://github.com/TanTanDev/macroquad_tantan_toolbox.git" }
+
+[profile.dev.package.'*']
+opt-level = 3

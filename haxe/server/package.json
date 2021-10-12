@@ -1,0 +1,17 @@
+{
+  "name": "server",
+  "private": true,
+  "type": "module",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "David Konsumer <konsumer@jetboystudio.com>",
+  "license": "MIT",
+  "dependencies": {
+    "ws": "^8.2.3"
+  }
+}

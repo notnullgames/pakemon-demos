@@ -1,0 +1,37 @@
+name: continuous-integration
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-20.04
+    steps:
+    - uses: actions/checkout@v2
+      with:
+        path: main
+        submodules: true
+    - name: Update
+      run: sudo apt-get update
+    - name: Install Dependencies
+      run: sudo apt-get install --assume-yes wine-stable wine64 python3-pip && dpkg --add-architecture i386 && apt-get update && apt-get install wine32 && pip3 install makelove
+    - name: Build
+      run: cd main/src && python3 -m makelove --config ../makelove.toml
+    - name: Artifact (love)
+      uses: actions/upload-artifact@v2
+      with:
+        name: pakemon.love
+        path: build/love/pakemon.love
+    - name: Artifact (AppImage)
+      uses: actions/upload-artifact@v2
+      with:
+        name: pakemon-appimage.zip
+        path: build/appimage/pakemon.AppImage
+    - name: Artifact (Win64)
+      uses: actions/upload-artifact@v2
+      with:
+        name: pakemon-win64.zip
+        path: build/win64/pakemon-win64.zip
+    - name: Artifact (MacOS)
+      uses: actions/upload-artifact@v2
+      with:
+        name: pakemon-macos.zip
+        path: build/macos/pakemon-macos.zip

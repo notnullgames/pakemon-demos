@@ -1,0 +1,47 @@
+<html lang="en">
+    <title>Pakémon</title>
+    <meta charset="utf-8">
+    <style>
+        html,
+        body{
+            margin: 0px;
+            padding: 0px;
+            width: 100vw;
+            height: 100vh;
+            background: black;
+        }
+
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        canvas {
+            margin: 0;
+            padding: 0;
+            outline: none;
+            transform: scale(1);
+            image-rendering: -moz-crisp-edges;
+            image-rendering: -webkit-crisp-edges;
+            image-rendering: pixelated;
+            image-rendering: crisp-edges;
+
+        }
+    </style>
+</head>
+
+<body>
+    <canvas width="320" height="240" id="glcanvas" tabindex='1'></canvas>
+    <script src="https://not-fl3.github.io/miniquad-samples/mq_js_bundle.js"></script>
+    <script>load('pakemon-macroquad.wasm')</script>
+<script>
+function handleResize () {
+  const scale = window.innerHeight < window.innerWidth ? window.innerHeight / 240 : window.innerWidth / 320
+  document.getElementById('glcanvas').style.transform = `scale(${scale})`
+}
+handleResize()
+window.addEventListener('resize', handleResize)
+</script>
+</body>
+</html>
