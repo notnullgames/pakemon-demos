@@ -22,23 +22,23 @@ With many of these, networking (an essential feature for talking to the backend)
 
 This is just what I actually implemented in the demo, not if the language/framework supports it.
 
-🔈 - has sound (converted from mod to some other format)
-🔊 - has sound (directly using mod file)
-🌄 - parallax background implemented
-🐈 - cat sprite animation implemented
-🎬 - has nicely seperated scenes
-🕸️ - built for web (or at least can be, with some work, that I may not have done in my demo setup)
-🥧 - tested on pi0 and seems to run ok
+- 🔈 - has sound (converted from mod to some other format)
+- 🔊 - has sound (directly using mod file)
+- 🌄 - parallax background implemented
+- 🐈 - cat sprite animation implemented
+- 🎬 - has nicely seperated scenes
+- 🕸️ - built for web (or at least can be, with some work, that I may not have done in my demo setup)
+- 🥧 - tested on pi0 and seems to run ok
 
 
 ### programming language
 
-[☢️](https://www.rust-lang.org/) - rust
-[🌙](https://www.lua.org/) - lua
-[🇨](https://en.cppreference.com/w/c/language) - C/C++
-[☕](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference) - javascript/typescript/actionscript
-[🐤](https://wren.io/) - wren
-[🐍](https://www.python.org/) - python
+- ☢️](https://www.rust-lang.org/) - rust
+- [🌙](https://www.lua.org/) - lua
+- [🇨](https://en.cppreference.com/w/c/language) - C/C++
+- [☕](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference) - javascript/typescript/actionscript
+- [🐤](https://wren.io/) - wren
+- [🐍](https://www.python.org/) - python
 
 
 ## other (sort of) related demos
