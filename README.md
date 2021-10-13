@@ -2,7 +2,7 @@
 
 This is a collection of ideas/demos where I basically implement the intro screen or some small part of pakemon to evaluate different languages and game frameworks.
 
-I feel like I am endlessly evaluating stuff, and writing demos, so I am hoping to lock-in to something that works well (enough), soon. I may add more features to a demo I end up wanting to pursue, but often as soon as I find an issue I move on to another evaluation. So far, [raylib](raylib/) performs the best on pi, with the most features, but is a bit more complicated to get working (need C tools, deps, etc.) It should be notes that raylib also has lots of [language bindings](https://github.com/raysan5/raylib/blob/master/BINDINGS.md) that may or may not work ok. [love](love/) is much simpler to get started with, has all the frontend features I need, and seemed to perform ok (as long as I was very careful about how I wrote things.) [node-raylib](node-raylib/) might be the fastest for me to work with, with all the features I need, so I need to do more testing on pi0.
+I feel like I am endlessly evaluating stuff, and writing demos, so I am hoping to lock-in to something that works well (enough), soon. I may add more features to a demo I end up wanting to pursue, but often as soon as I find an issue I move on to another evaluation. So far, [raylib](raylib/) performs the best on pi, with the most features, but is a bit more complicated to get working (need C tools, deps, etc.) It should be noted that raylib also has lots of [language bindings](https://github.com/raysan5/raylib/blob/master/BINDINGS.md) that may or may not work ok. [love](love/) is much simpler to get started with, has all the frontend features I need, and seemed to perform ok (as long as I was very careful about how I wrote things.) [node-raylib](node-raylib/) might be the fastest for me to work with, with all the features I need, so I need to do more testing on pi0.
 
 
 ## demos
@@ -26,7 +26,7 @@ Others I tried, but skipped due to not being able to get them working at all:
 - [wray](https://github.com/TSnake41/raylib-wren) - [🐤](https://wren.io/) - lots of issues with deps and building, and release did not work for me
 - [raylib-lua](https://github.com/TSnake41/raylib-lua) [🌙](https://www.lua.org/) - similar issues to wray, which it's based on
 - [pyckitup](pyckitup/) - [☢️](https://www.rust-lang.org/)/[🐍](https://www.python.org/) - I did get this building at one time, but last I tried on linux could not build pyckitup due to rust errors
-- ...probly more that I forgot
+- ...probly more that I forgot. I have tried a lot of things.
 
 
 ### implemented features
