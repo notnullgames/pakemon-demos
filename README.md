@@ -15,7 +15,6 @@ I feel like I am endlessly evaluating stuff, and writing demos, so I am hoping t
 - [love](love/) - [🌙](https://www.lua.org/) 🔊 🐈 🌄 🎬 🕸️ 🥧
 - [macroquad](macroquad/) - [☢️](https://www.rust-lang.org/) 🐈 🌄 🕸️ 🥧
 - [node-raylib](node-raylib/) - [☕](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference) 🔊 🌄 🎬
-- [pyckitup](pyckitup/) - [☢️](https://www.rust-lang.org/)/[🐍](https://www.python.org/) 🐈 🕸️
 - [pygame](pygame/) - [🐍](https://www.python.org/) 🔊 🐈 🎬 🌄
 - [raylib](raylib/) - [🇨](https://en.cppreference.com/w/c/language) 🔊 🌄 🎬 🕸️ 🥧
 - [sdl](sdl/) - [🇨](https://en.cppreference.com/w/c/language) 🕸️ 🥧
@@ -25,6 +24,7 @@ Others I tried, but skipped due to not being able to get them working at all:
 
 - [wray](https://github.com/TSnake41/raylib-wren) - [🐤](https://wren.io/) - lots of issues with deps and building, and release did not work for me
 - [raylib-lua](https://github.com/TSnake41/raylib-lua) [🌙](https://www.lua.org/) - similar issues to wray, which it's based on
+- [pyckitup](pyckitup/) - [☢️](https://www.rust-lang.org/)/[🐍](https://www.python.org/) - I did get this building at one time, but last I tried on linux could not build pyckitup due to rust errors
 - ...probly more that I forgot
 
 
