@@ -1,5 +1,7 @@
-SDL2TEst:
-	g++ `pkg-config --cflags --libs sdl2 SDL2_ttf SDL2_image` main.cpp -o SDL2Test
+CXXFLAGS:=$(shell pkg-config --cflags sdl2 SDL2_ttf SDL2_image) $(CXXFLAGS)
+LDLIBS:=$(shell pkg-config --libs sdl2 SDL2_ttf SDL2_image) $(LDLIBS)
+
+all: SDL2Test
 
 .PHONY: clean
 clean:

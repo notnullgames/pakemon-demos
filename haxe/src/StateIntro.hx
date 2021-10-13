@@ -17,19 +17,19 @@ class StateIntro extends FlxState {
     
     // it's a shame I had to convert this from a mod file
     // should look into loading mods directly
-    FlxG.sound.playMusic("assets/music/the_golden_ages.ogg", 1, true);
+    FlxG.sound.playMusic("assets/the_golden_ages.ogg", 1, true);
 
     // parallax images: each layer manages it's own scroll/tile
-    var cityBg = new FlxBackdrop("assets/images/far-buildings.png", 0, 0, true, false);
+    var cityBg = new FlxBackdrop("assets/far-buildings.png", 0, 0, true, false);
     cityBg.velocity.set(-1, 0);
     add(cityBg);
 
-    var cityFg = new FlxBackdrop("assets/images/back-buildings.png", 0, 0, true, false);
+    var cityFg = new FlxBackdrop("assets/back-buildings.png", 0, 0, true, false);
     cityFg.velocity.set(-15, 0);
     cityFg.y = -20;
     add(cityFg);
 
-    var fg = new FlxBackdrop("assets/images/foreground.png", 0, 0, true, false);
+    var fg = new FlxBackdrop("assets/foreground.png", 0, 0, true, false);
     fg.velocity.set(-60, 0);
     fg.y = 50;
     add(fg);
@@ -60,7 +60,7 @@ class StateIntro extends FlxState {
 
     // add offscreen logo
     var imgTitle = new FlxSprite();
-    imgTitle.loadGraphic("assets/images/title.png");
+    imgTitle.loadGraphic("assets/title.png");
     imgTitle.screenCenter();
     imgTitle.y = -1 * imgTitle.height;
     add(imgTitle);

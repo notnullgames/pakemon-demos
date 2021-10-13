@@ -4,6 +4,8 @@ Short for "packet monitor/monster". Gamified fun device/platform for hacking tec
 
 This version is made with [pyckitup](https://github.com/RustPython/pyckitup).
 
+> **WARNING** I currently can't build pyckitup on linux (lots of "expected `u32`, found `usize`" errors)
+
 ## installation
 
 You will need `pyckitup` in your path. I installed it in mac, like this:

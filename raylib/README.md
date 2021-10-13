@@ -3,11 +3,12 @@
 You will need cmake, and a C compiler
 
 ```
-git clone --recursive git@github.com:notnullgames/pakemon-raylib.git
-cd pakemon-raylib/build
+mkdir raylib/build
+cd raylib/build
 cmake ..
 make
-./pakemon
+cd ..
+./build/pakemon
 ```
 
 Go print out [the cheatsheet](https://www.raylib.com/cheatsheet/cheatsheet.html), it's awesome.

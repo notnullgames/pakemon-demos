@@ -129,7 +129,7 @@ class Main {
     Window.resize(320, 240)
     Window.title = "Pakémon"
     Window.lockstep = true
-    Font.load("sans", "res/OpenSans-Regular.ttf", 12).antialias = true
+    Font.load("sans", "res/PixelOperator.ttf", 12).antialias = true
   }
 
   update() {
