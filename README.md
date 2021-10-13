@@ -55,7 +55,7 @@ This is just what I actually implemented in the demo, not if the language/framew
 
 ### bugs
 
-I am getting a minor glitch on parallax, on raylib-based demos ([raylib](raylib/) and [node-raylib](node-raylib/)). It may be how I am doing the scrolling, or it may be a problem with offscreen-rendering.
+I am getting a minor glitch on parallax, on raylib-based demos ([raylib](raylib/) and [node-raylib](node-raylib/)). It may be how I am doing the scrolling, or it may be a problem with offscreen-rendering in raylib.
 
 ![parallax-error](parallax_error.png)
 
