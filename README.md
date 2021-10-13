@@ -6,6 +6,8 @@ I feel like I am endlessly evaluating stuff, and writing demos, so I am hoping t
 
 With many of these, networking (an essential feature for talking to the backend) is going to be an issue, either on native, or on the web. Generally, the node/deno/C/rust libraries can use a 3rd party cross-environment lib (using websockets via wasm or directly), but for example love2d compiled to wasm is not at all easy to set this up for (I will need to compile my own runtime with added websockets, at C level, and in wasm wrapper.) With this in mind, I may even drop the web as a potential target, and just focus first on getting it to run well, natively, on the pi0.
 
+## demos
+
 There is a lot of duplication of assets. Sorry about that. These are all meant to be self-contained projects, so you can quickly try each of them out.
 
 - [bevy](bevy/) - [☢️](https://www.rust-lang.org/)
@@ -22,7 +24,7 @@ There is a lot of duplication of assets. Sorry about that. These are all meant t
 - [sdl](sdl/) - [🇨](https://en.cppreference.com/w/c/language) 🕸️ 🥧
 
 
-Others I tried, but skipped do to not being able to get it working at all:
+Others I tried, but skipped due to not being able to get them working at all:
 
 - [wray](https://github.com/TSnake41/raylib-wren) - [🐤](https://wren.io/) - lots of issues with deps and building, and release did not work for me
 - [raylib-lua](https://github.com/TSnake41/raylib-lua) similar issues to wray, wchih it's based on
@@ -50,6 +52,12 @@ This is just what I actually implemented in the demo, not if the language/framew
 - [🐤](https://wren.io/) - wren
 - [🐍](https://www.python.org/) - python
 
+
+### bugs
+
+I am getting a minor glitch on parallax, on raylib-based demos ([raylib](raylib/) and [node-raylib](node-raylib/)). It may be how I am doing the scrolling, or it may be a problem with offscreen-rendering.
+
+![parallax-error](parallax_error.png)
 
 ## other (sort of) related demos
 
