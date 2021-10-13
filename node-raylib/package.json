@@ -1,0 +1,11 @@
+{
+  "name": "paklemon-node",
+  "version": "0.0.0",
+  "scripts": {
+    "start": "node pakemon.js"
+  },
+  "dependencies": {
+    "raylib": "^0.8.1"
+  },
+  "type": "module"
+}

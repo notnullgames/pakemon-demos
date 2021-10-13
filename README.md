@@ -2,9 +2,11 @@
 
 This is a collection of ideas/demos where I basically implement the intro screen or some small part of pakemon to evaluate different languages and game frameworks.
 
-I feel like I am endlessly evaluating stuff, and writing demos, so I am hoping to lock-in to something that works well (enough), soon. I may add more features to a demo I end up wanting to pursue, but often as soon as I find an issue I move on to another evaluation. So far, [raylib](raylib/) performs the best on pi, with the most features, but is a bit more complicated to get working (need C tools, deps, etc.) [love](love/) is much simpler to get started with, has all the frontend features I need, and seemed to perform ok (as long as I was very careful about how I wrote things.)
+I feel like I am endlessly evaluating stuff, and writing demos, so I am hoping to lock-in to something that works well (enough), soon. I may add more features to a demo I end up wanting to pursue, but often as soon as I find an issue I move on to another evaluation. So far, [raylib](raylib/) performs the best on pi, with the most features, but is a bit more complicated to get working (need C tools, deps, etc.) It should be notes that raylib also has lots of [language bindings](https://github.com/raysan5/raylib/blob/master/BINDINGS.md) that may or may not work ok. [love](love/) is much simpler to get started with, has all the frontend features I need, and seemed to perform ok (as long as I was very careful about how I wrote things.) node-raylib might be the fastest for me to work with, so I need to do more testing on pi0. 
 
 With many of these, networking (an essential feature for talking to the backend) is going to be an issue, either on native, or on the web. Generally, the C or Rust libraries can use a 3rd party cross-environment lib (using websockets via wasm or directly), but for example love2d compiled to wasm is not at all easy to set this up for (I will need to compile my own runtime with added websockets, at C level, and in wasm wrapper.) With this in mind, I may even drop the web as a potential target, and just focus first on getting it to run well, natively, on the pi0.
+
+There is a lot of duplication of assets. Sorry about that. These are all meant to be self-contained projects, so you can quickly try each of them out.
 
 - [bevy](bevy/) - [☢️](https://www.rust-lang.org/)
 - [deno](deno/) - [☕](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference) 🎬 🕸️
@@ -13,10 +15,18 @@ With many of these, networking (an essential feature for talking to the backend)
 - [html5-canvas](html5-canvas/) - [☕](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference) 
 - [love](love/) - [🌙](https://www.lua.org/) 🔊 🐈 🌄 🎬 🕸️ 🥧
 - [macroquad](macroquad/) - [☢️](https://www.rust-lang.org/) 🐈 🌄 🕸️ 🥧
+- [node-raylib](node-raylib/) - [☕](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference) 🔊 🌄 🎬
 - [pyckitup](pyckitup/) - [☢️](https://www.rust-lang.org/)/[🐍](https://www.python.org/) 🐈 🕸️
 - [pygame](pygame/) - [🐍](https://www.python.org/) 🔊 🐈 🎬 🌄
 - [raylib](raylib/) - [🇨](https://en.cppreference.com/w/c/language) 🔊 🌄 🎬 🕸️ 🥧
 - [sdl](sdl/) - [🇨](https://en.cppreference.com/w/c/language) 🕸️ 🥧
+
+
+Others I tried, but skipped do to not being able to get it working at all:
+
+- [wray](https://github.com/TSnake41/raylib-wren) - [🐤](https://wren.io/) - lots of issues with deps and building, and release did not work for me
+- [raylib-lua](https://github.com/TSnake41/raylib-lua) similar issues to wray, wchih it's based on
+- ...probly more that I forgot
 
 ### implemented features
 
