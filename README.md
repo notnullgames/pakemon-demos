@@ -27,7 +27,7 @@ There is a lot of duplication of assets. Sorry about that. These are all meant t
 Others I tried, but skipped due to not being able to get them working at all:
 
 - [wray](https://github.com/TSnake41/raylib-wren) - [🐤](https://wren.io/) - lots of issues with deps and building, and release did not work for me
-- [raylib-lua](https://github.com/TSnake41/raylib-lua) similar issues to wray, wchih it's based on
+- [raylib-lua](https://github.com/TSnake41/raylib-lua) [🌙](https://www.lua.org/) - similar issues to wray, which it's based on
 - ...probly more that I forgot
 
 ### implemented features
