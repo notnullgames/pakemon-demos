@@ -1,4 +1,4 @@
-// this is a single layer of a parallax background effect
+// this is a single layer of a parallax background effect for node-raylib
 
 import r from 'raylib'
 
@@ -20,8 +20,9 @@ export default class ParallaxLayer {
     if (this.scroll <= (-1 * this.image.width)) {
       this.scroll = 0
     }
-    r.DrawTextureV(this.image, r.Vector2(this.scroll, this.offsety), r.WHITE)
-    r.DrawTextureV(this.image, r.Vector2(this.scroll + this.image.width, this.offsety), r.WHITE)
+
+    r.DrawTexture(this.image, this.scroll, this.offsety, r.WHITE)
+    r.DrawTexture(this.image, this.scroll + this.image.width, this.offsety, r.WHITE)
   }
 
   destroy () {

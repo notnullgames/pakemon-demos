@@ -1,5 +1,6 @@
 {
-  "name": "paklemon-node",
+  "name": "pakemon-node",
+  "private": true,
   "version": "0.0.0",
   "scripts": {
     "start": "node pakemon.js"
