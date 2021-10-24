@@ -1,6 +1,7 @@
 import r from 'raylib'
-import ParallaxLayer from '../ParallaxLayer.js'
-import SpriteAnimation from '../SpriteAnimation.js'
+import ParallaxLayer from '../lib/ParallaxLayer.js'
+import SpriteAnimation from '../lib/SpriteAnimation.js'
+import { buttonDown } from '../lib/input.js'
 
 export default class SceneIntro {
   setup () {
@@ -21,6 +22,10 @@ export default class SceneIntro {
 
   update () {
     r.UpdateMusicStream(this.music)
+
+    if (buttonDown('A', 'B', 'X', 'Y', 'START', 'SELECT')) {
+      global.setScene('menu')
+    }
 
     r.BeginDrawing()
     r.ClearBackground(r.BLACK)

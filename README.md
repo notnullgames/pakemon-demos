@@ -50,15 +50,16 @@ With many of these, networking (an essential feature for talking to the backend)
 
 ### bugs
 
-I am getting a minor glitch on parallax, on raylib-based demos ([raylib](raylib/) and [raylib-rs](raylib-rs/)). It may be how I am doing the scrolling, a type-conversion problem, or it may be a problem with offscreen-rendering in raylib.
+I am getting a minor glitch on parallax, on raylib-based demos ([raylib](raylib/) and [raylib-rs](raylib-rs/)). It may be how I am doing the scrolling, a type-conversion problem, or it may be a problem with offscreen-rendering in raylib. It seems to be fine in [node-raylib](node-raylib/).
 
 ![parallax-error](parallax_error.png)
 
 
 ## some I'd like to make
 
-- quickjs/raylib - [☕](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference) - [this](https://github.com/sntg-p/QuickJS-raylib) seems very incomplete, but I could see it performing better than nodejs, and it's cool it can be compiled to a standalone program.
-- auto-generated node raylib, using FFI - [☕](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference) - Might perform better than [node-raylib](node-raylib/) and maybe it would help get it working on Mac.
+- quickjs/raylib - [☕](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference) - [this](https://github.com/sntg-p/QuickJS-raylib) seems very incomplete, but I could see it performing better than nodejs, and it's cool it can be compiled to a standalone program. Maybe I could auto-generate bindings to make it simpler, like 1-for-1 raylib C API (initially)
+- auto-generated node-raylib, using FFI - [☕](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference) - Might perform better than [node-raylib](node-raylib/) and it would help get it working on Mac.
+- port js libray fully to web-apis - This seems huge, but I could see recreating node-raylib with browser APIs, so the code essentially works the same 
 - [wray](https://github.com/TSnake41/raylib-wren) - [🐤](https://wren.io/) - lots of issues with deps and building, and release did not work for me
 - [raylib-lua](https://github.com/TSnake41/raylib-lua) [🌙](https://www.lua.org/) - similar issues to wray, which it's based on
 - [pyckitup](pyckitup/) - [☢️](https://www.rust-lang.org/)/[🐍](https://www.python.org/) - I did get this building at one time, but last I tried on linux could not build pyckitup due to rust errors

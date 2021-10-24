@@ -1,12 +1,15 @@
 import r from 'raylib'
+
 import SceneIntro from './scenes/scene_intro.js'
+import SceneMenu from './scenes/scene_menu.js'
 
 r.InitWindow(320, 240, 'Pakémon')
 r.SetTargetFPS(60)
 r.InitAudioDevice()
 
 const scenes = {
-  intro: new SceneIntro()
+  intro: new SceneIntro(),
+  menu: new SceneMenu()
 }
 
 // track & set current active scene
