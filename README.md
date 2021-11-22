@@ -58,7 +58,7 @@ I am getting a minor glitch on parallax, on raylib-based demos ([raylib](raylib/
 ## some I'd like to make
 
 - quickjs/raylib - [☕](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference) - [this](https://github.com/sntg-p/QuickJS-raylib) seems very incomplete, but I could see it performing better than nodejs, and it's cool it can be compiled to a standalone program. Maybe I could auto-generate bindings to make it simpler, like 1-for-1 raylib C API (initially)
-- auto-generated node-raylib, using FFI - [☕](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference) - Might perform better than [node-raylib](node-raylib/) and it would help get it working on Mac.
+- auto-generated node-raylib, using FFI - [☕](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference) - Might perform better than [node-raylib](node-raylib/) and it would help get it working on 4.0 (instead of 3.5.) I had [trouble building](https://github.com/RobLoach/node-raylib/issues/98), but it can be built for 3.5 or could be updated.
 - port js libray fully to web-apis - This seems huge, but I could see recreating node-raylib with browser APIs, so the code essentially works the same 
 - [wray](https://github.com/TSnake41/raylib-wren) - [🐤](https://wren.io/) - lots of issues with deps and building, and release did not work for me
 - [raylib-lua](https://github.com/TSnake41/raylib-lua) [🌙](https://www.lua.org/) - similar issues to wray, which it's based on
