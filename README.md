@@ -8,16 +8,16 @@ I feel like I am endlessly evaluating stuff, and writing demos, so I am hoping t
 ## demos
 
 - [bevy](bevy/) - [☢️](https://www.rust-lang.org/)
-- [deno](deno/) - [☕](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference) 🎬 🕸️
+- [deno/sdl2](deno-sdl2/) - [☕](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference) 🎬 🕸️
 - [dome](dome/) - [🐤](https://wren.io/) 🌄 🥧 
 - [haxe](haxe/) - [☕](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference) 🔈 🐈 🌄 🎬 🕸️ 🥧 
 - [html5-canvas](html5-canvas/) - [☕](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference) 
-- [love](love/) - [🌙](https://www.lua.org/) 🔊 🐈 🌄 🎬 🕸️ 🥧
-- [macroquad](macroquad/) - [☢️](https://www.rust-lang.org/) 🐈 🌄 🕸️ 🥧
-- [node-raylib](node-raylib/) - [☕](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference) 🔊 🐈 🌄 🎬
+- [lua/love](love/) - [🌙](https://www.lua.org/) 🔊 🐈 🌄 🎬 🕸️ 🥧
+- [rust/macroquad](macroquad/) - [☢️](https://www.rust-lang.org/) 🐈 🌄 🕸️ 🥧
+- [node/raylib](node-raylib/) - [☕](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference) 🔊 🐈 🌄 🎬
 - [pygame](pygame/) - [🐍](https://www.python.org/) 🔊 🐈 🎬 🌄
 - [raylib](raylib/) - [💣](https://en.cppreference.com/w/c/language) 🔊 🌄 🎬 🕸️ 🥧
-- [raylib-rs](raylib-rs/) - [☢️](https://www.rust-lang.org/) 🌄 🕸️
+- [rust/raylib](raylib-rs/) - [☢️](https://www.rust-lang.org/) 🌄 🕸️
 - [sdl](sdl/) - [💣](https://en.cppreference.com/w/c/language) 🕸️ 🥧
 
 ## incomplete
