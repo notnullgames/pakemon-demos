@@ -19,6 +19,7 @@ I feel like I am endlessly evaluating stuff, and writing demos, so I am hoping t
 - [raylib](raylib/) - [💣](https://en.cppreference.com/w/c/language) 🔊 🌄 🎬 🕸️ 🥧
 - [raylib-rs](raylib-rs/) - [☢️](https://www.rust-lang.org/) 🌄 🕸️
 - [sdl](sdl/) - [💣](https://en.cppreference.com/w/c/language) 🕸️ 🥧
+- [nim/raylib](nim-ray/) - 🔊 🌄 🎬 🕸️ 🥧
 
 ### implemented features
 

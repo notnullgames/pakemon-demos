@@ -1,0 +1,1 @@
+requires "nimraylib_now"
