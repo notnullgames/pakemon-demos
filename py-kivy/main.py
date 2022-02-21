@@ -7,14 +7,17 @@ from kivy.app import App
 from kivy.uix.label import Label
 from kivy.core.window import Window
 
+from scenes.intro import Scene as SceneIntro
+
+
+
 Window.size = (320, 240)
 
-
-class Pakemon(App):
+class PakemonApp(App):
     title = 'Pakémon'
     def build(self):
-        return Label(text='Hello world')
+        return SceneIntro()
 
 
 if __name__ == '__main__':
-    Pakemon().run()
+    PakemonApp().run()
