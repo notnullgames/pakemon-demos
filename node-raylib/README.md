@@ -1,6 +1,6 @@
 # node-raylib
 
-Currently, I can't install node-raylib on OSX, but it seems to work ok on linux.
+It is currently running off raylib4 branch (that I am working on) but eventually will be just raylib from npm.
 
 ## usage
 
