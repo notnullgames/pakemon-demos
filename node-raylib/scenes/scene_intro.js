@@ -3,12 +3,27 @@ import ParallaxLayer from '../lib/ParallaxLayer.js'
 import SpriteAnimation from '../lib/SpriteAnimation.js'
 import { buttonDown } from '../lib/input.js'
 
+const {
+  BeginDrawing,
+  BLACK,
+  ClearBackground,
+  DrawText,
+  DrawTexture,
+  EndDrawing,
+  LoadMusicStream,
+  LoadTexture,
+  PlayMusicStream,
+  UnloadMusicStream,
+  UpdateMusicStream,
+  WHITE
+} = r
+
 export default class SceneIntro {
   setup () {
-    this.music = r.LoadMusicStream('assets/the_golden_ages.mod')
-    this.title = r.LoadTexture('assets/title.png')
+    this.music = LoadMusicStream('assets/the_golden_ages.mod')
+    this.title = LoadTexture('assets/title.png')
     this.titleY = -this.title.height
-    r.PlayMusicStream(this.music)
+    PlayMusicStream(this.music)
 
     this.bg = [
       new ParallaxLayer('assets/far-buildings.png', -0.1),
@@ -21,14 +36,14 @@ export default class SceneIntro {
   }
 
   update () {
-    r.UpdateMusicStream(this.music)
+    UpdateMusicStream(this.music)
 
     if (buttonDown('A', 'B', 'X', 'Y', 'START', 'SELECT')) {
       global.setScene('menu')
     }
 
-    r.BeginDrawing()
-    r.ClearBackground(r.BLACK)
+    BeginDrawing()
+    ClearBackground(BLACK)
 
     for (const layer of this.bg) {
       layer.draw()
@@ -37,18 +52,18 @@ export default class SceneIntro {
     if (this.titleY < 60) {
       this.titleY += 0.135
     } else {
-      r.DrawText('PRESS A BUTTON', 115, 120, 10, r.WHITE)
+      DrawText('PRESS A BUTTON', 115, 120, 10, WHITE)
     }
 
-    r.DrawTexture(this.title, this.title.width / 2, this.titleY, r.WHITE)
+    DrawTexture(this.title, this.title.width / 2, this.titleY, WHITE)
 
     this.cat.draw(150, 200)
 
-    r.EndDrawing()
+    EndDrawing()
   }
 
   destroy () {
-    r.UnloadMusicStream(this.music)
+    UnloadMusicStream(this.music)
     for (const layer of this.bg) {
       layer.destroy()
     }

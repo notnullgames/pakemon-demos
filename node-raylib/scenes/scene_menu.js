@@ -4,10 +4,24 @@ import r from 'raylib'
 
 import { buttonDown, buttonUp } from '../lib/input.js'
 
+const {
+  BeginDrawing,
+  BLACK,
+  BLUE,
+  ClearBackground,
+  DrawRectangle,
+  DrawText,
+  EndDrawing,
+  LoadSound,
+  PlaySound,
+  UnloadSound,
+  WHITE
+} = r
+
 export default class SceneIntro {
   setup () {
-    this.sMove = r.LoadSound('assets/move.wav')
-    this.sOk = r.LoadSound('assets/ok.wav')
+    this.sMove = LoadSound('assets/move.wav')
+    this.sOk = LoadSound('assets/ok.wav')
     this.selection = 0
     this.options = [
       'Choice 0',
@@ -53,7 +67,7 @@ export default class SceneIntro {
     // choice made
     if (buttonDown('A', 'START') && this.last !== 0) {
       this.last = 0
-      r.PlaySound(this.sOk)
+      PlaySound(this.sOk)
       console.log(`You chose "${this.options[this.selection]}"`)
     }
 
@@ -71,7 +85,7 @@ export default class SceneIntro {
     if (buttonDown('DOWN') && this.last !== 1) {
       this.last = 1
       this.selection += 1
-      r.PlaySound(this.sMove)
+      PlaySound(this.sMove)
       if (this.selection >= this.options.length) {
         this.selection = 0
       }
@@ -80,7 +94,7 @@ export default class SceneIntro {
     if (buttonDown('UP') && this.last !== -1) {
       this.last = -1
       this.selection -= 1
-      r.PlaySound(this.sMove)
+      PlaySound(this.sMove)
       if (this.selection < 0) {
         this.selection = this.options.length - 1
       }
@@ -95,30 +109,30 @@ export default class SceneIntro {
       start = page * screenlen
     }
 
-    r.BeginDrawing()
-    r.ClearBackground(r.BLACK)
+    BeginDrawing()
+    ClearBackground(BLACK)
 
     for (let i = start; i < (start + screenlen); i++) {
       const y = (i - start)
       // indicator
       if (this.selection === i) {
-        r.DrawRectangle(0, (y * 19) + 4, 320, 22, r.BLUE)
+        DrawRectangle(0, (y * 19) + 4, 320, 22, BLUE)
       }
 
       if (i < this.options.length) {
         // shadow
-        r.DrawText(this.options[i], 22, 8 + (y * 19), 15, r.BLACK)
+        DrawText(this.options[i], 22, 8 + (y * 19), 15, BLACK)
 
         // text
-        r.DrawText(this.options[i], 24, 10 + (y * 19), 15, r.WHITE)
+        DrawText(this.options[i], 24, 10 + (y * 19), 15, WHITE)
       }
     }
 
-    r.EndDrawing()
+    EndDrawing()
   }
 
   destroy () {
-    r.UnloadSound(this.sMove)
-    r.UnloadSound(this.sOk)
+    UnloadSound(this.sMove)
+    UnloadSound(this.sOk)
   }
 }

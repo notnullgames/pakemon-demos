@@ -4,11 +4,11 @@ import SceneIntro from './scenes/scene_intro.js'
 import SceneMenu from './scenes/scene_menu.js'
 
 const {
+  CloseWindow,
+  InitAudioDevice,
   InitWindow,
   SetTargetFPS,
-  InitAudioDevice,
-  WindowShouldClose,
-  CloseWindow
+  WindowShouldClose
 } = r
 
 InitWindow(320, 240, 'Pakémon')
