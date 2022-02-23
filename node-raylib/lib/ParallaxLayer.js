@@ -2,11 +2,18 @@
 
 import r from 'raylib'
 
+const {
+  DrawTexture,
+  LoadTexture,
+  UnloadTexture,
+  WHITE
+} = r
+
 export default class ParallaxLayer {
   constructor (image, speed = 1.0, offsety = 0, offset = 0) {
     this.iloadedimages = typeof image === 'string'
     if (this.iloadedimages) {
-      this.image = r.LoadTexture(image)
+      this.image = LoadTexture(image)
     } else {
       this.image = image
     }
@@ -21,13 +28,13 @@ export default class ParallaxLayer {
       this.scroll = 0
     }
 
-    r.DrawTexture(this.image, this.scroll, this.offsety, r.WHITE)
-    r.DrawTexture(this.image, this.scroll + this.image.width, this.offsety, r.WHITE)
+    DrawTexture(this.image, this.scroll, this.offsety, WHITE)
+    DrawTexture(this.image, this.scroll + this.image.width, this.offsety, WHITE)
   }
 
   destroy () {
     if (this.iloadedimages) {
-      r.UnloadTexture(this.image)
+      UnloadTexture(this.image)
     }
   }
 }

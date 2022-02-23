@@ -2,11 +2,21 @@
 
 import r from 'raylib'
 
+const {
+  DrawTextureRec,
+  GetTime,
+  LoadTexture,
+  Rectangle,
+  UnloadTexture,
+  Vector2,
+  WHITE
+} = r
+
 export default class SpriteAnimation {
   constructor (image, frames = [0], speed = 60, width = 32, height = 32) {
     this.iloadedimages = typeof image === 'string'
     if (this.iloadedimages) {
-      this.image = r.LoadTexture(image)
+      this.image = LoadTexture(image)
     } else {
       this.image = image
     }
@@ -23,15 +33,15 @@ export default class SpriteAnimation {
 
   draw (x, y) {
     if (this.playing) {
-      this.frame = Math.floor(r.GetTime() / this.speed) % this.frames.length
+      this.frame = Math.floor(GetTime() / this.speed) % this.frames.length
     }
     const f = this.frames[this.frame]
-    r.DrawTextureRec(this.image, r.Rectangle(...f, this.width, this.height), r.Vector2(x, y), r.WHITE)
+    DrawTextureRec(this.image, Rectangle(...f, this.width, this.height), Vector2(x, y), WHITE)
   }
 
   destroy () {
     if (this.iloadedimages) {
-      r.UnloadTexture(this.image)
+      UnloadTexture(this.image)
     }
   }
 }
