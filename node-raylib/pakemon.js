@@ -3,9 +3,17 @@ import r from 'raylib'
 import SceneIntro from './scenes/scene_intro.js'
 import SceneMenu from './scenes/scene_menu.js'
 
-r.InitWindow(320, 240, 'Pakémon')
-r.SetTargetFPS(60)
-r.InitAudioDevice()
+const {
+  InitWindow,
+  SetTargetFPS,
+  InitAudioDevice,
+  WindowShouldClose,
+  CloseWindow
+} = r
+
+InitWindow(320, 240, 'Pakémon')
+SetTargetFPS(60)
+InitAudioDevice()
 
 const scenes = {
   intro: new SceneIntro(),
@@ -29,11 +37,11 @@ global.setScene = name => {
 // intial scene is intro
 global.setScene('intro')
 
-while (!r.WindowShouldClose()) {
+while (!WindowShouldClose()) {
   global.currentScene.update()
 }
 
 if (global.currentScene && global.currentScene.destroy) {
   global.currentScene.destroy()
 }
-r.CloseWindow()
+CloseWindow()
