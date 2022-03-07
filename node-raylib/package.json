@@ -6,7 +6,7 @@
     "start": "node pakemon.js"
   },
   "dependencies": {
-    "raylib": "github:RobLoach/node-raylib#raylib4"
+    "raylib": "github:RobLoach/node-raylib#b875971d095e803f131b242b3228356e1f2113fb"
   },
   "type": "module"
 }
