@@ -5,32 +5,25 @@
 #include "raylib.h"
 #include "pakemon.h"
 
-enum scene current_scene = INTRO;
-
 int main(void) {
     InitWindow(SCREEN_WIDTH, SCREEN_HEIGHT, "Pakémon");
     SetTargetFPS(60);
     InitAudioDevice();
     
     switch(current_scene) {
-        case INTRO:
-            SceneIntroSetup();
-            break;
+        case SCENE_INTRO:SceneIntroSetup(); break;
     }
 
     
     while (!WindowShouldClose()) {
+        global_time++;
         switch(current_scene) {
-            case INTRO:
-                SceneIntroUpdate();
-                break;
+            case SCENE_INTRO: SceneIntroUpdate(); break;
         }
     }
 
     switch(current_scene) {
-        case INTRO:
-            SceneIntroDestroy();
-            break;
+        case SCENE_INTRO: SceneIntroDestroy(); break;
     }
     
     CloseWindow();
