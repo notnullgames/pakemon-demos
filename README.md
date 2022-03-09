@@ -86,3 +86,9 @@ Not all of these are public, so you may get a 404.
 - [rattata](https://github.com/notnullgames/rattata) - start of rust-based manager of deployed RAT payloads. Uses tor + socket-server to obfuscate hacker's location 
 - [amethyst-example](https://github.com/notnullgames/amethyst-example) - basic rust/amethyst boilerplate game
 - [personality-builder](https://github.com/notnullgames/pakemon-personalitybuilder) - silly tool to allow you to edit a personality animation-set for pakemon
+
+## credits
+
+- [Cyberpunk Street Environment](https://ansimuz.itch.io/cyberpunk-street-environment) by ansimuz
+- [The Golden Ages](https://modarchive.org/index.php?request=view_by_moduleid&query=78423) by 4mat
+- can't remember where I got the cat sprites, looked around but couldn't find it. If anyone knows, let me know!
