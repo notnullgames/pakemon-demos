@@ -25,7 +25,7 @@ while not WindowShouldClose():
 
   # example to show spawning another program
   if IsKeyDown(KEY_SPACE):
-    spawn = "nim compile --path=src/lib --run --outdir:. src/pakemon.nim"
+    spawn = "nim compile --path=src/lib --run --outdir:/tmp src/pakemon.nim"
     break
 
   if IsKeyDown(KEY_ESCAPE):
