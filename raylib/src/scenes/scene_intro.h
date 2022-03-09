@@ -59,9 +59,9 @@ void SceneIntroUpdate() {
     DrawTexture(back.texture, back.scroll + back.texture.width, 0, WHITE);
     DrawTexture(front.texture, front.scroll, 50, WHITE);
     DrawTexture(front.texture, front.scroll + front.texture.width, 50, WHITE);
-    DrawSprite(&cat, 150, 200, 0, 1, WHITE);
+    DrawSprite(&cat, 140, 200, 0, 1, WHITE);
     if (showStart) {
-        DrawText("PRESS ANY KEY", 105, 120, 14, WHITE);
+        DrawText("PRESS START", 110, 120, 14, WHITE);
     }
     DrawTexture(textureLogo, 80, logoPositionY, WHITE);
     EndDrawing();
