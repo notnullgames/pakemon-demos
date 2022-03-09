@@ -16,7 +16,7 @@ var
   layer1 = ParalaxLayer(offsetY: 0, scroll: 0, speed: -0.1, image: LoadTexture("assets/far-buildings.png"))
   layer2 = ParalaxLayer(offsetY: 0, scroll: 0, speed: -0.5, image: LoadTexture("assets/back-buildings.png"))
   layer3 = ParalaxLayer(offsetY: 50, scroll: 0, speed: -1.0, image: LoadTexture("assets/foreground.png"))
-  cat = Spritesheet(playing: true, image: LoadTexture("assets/cat-run-right.png"), frames: @[0, 1, 2, 3, 4, 5], speed: 0.25, height: 32, width: 32, frame: 0)
+  cat = Spritesheet(playing: true, image: LoadTexture("assets/cat.png"), frames: @[36, 37, 38, 39, 40, 41], speed: 0.25, height: 32, width: 32, frame: 0)
 
 
 PlayMusicStream(music)

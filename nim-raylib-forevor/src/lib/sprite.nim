@@ -3,18 +3,21 @@ import raylib
 type
   Spritesheet* = ref object
     image*:Texture2D
-    height*:int
-    width*:int
+    height*:float
+    width*:float
     frames*:seq[int]
     frame*:int
     speed*:float
     playing*:bool
 
-proc draw*(this:Spritesheet, x:int, y:int) =
+proc draw*(this:Spritesheet, x:float, y:float) =
   if this.playing:
     this.frame = int(GetTime() / this.speed) mod len(this.frames)
   let f = this.frames[this.frame]
-  DrawTextureRec(this.image, Rectangle(x:float((f mod x) * this.height), y:float(int(f / x) * this.width), width:float(this.width), height:float(this.height)), Vector2(x:float(x), y:float(y)), WHITE)
+  let xratio = int(float(this.image.width) / this.width)
+  let xcurrent = float(f mod xratio) * this.height
+  let ycurrent = float(int(f / xratio)) * float(this.width)
+  DrawTextureRec(this.image, Rectangle(x: xcurrent, y: ycurrent, width: this.width, height: this.height), Vector2(x: x, y: y), WHITE)
 
 proc unload*(this:Spritesheet) =
   UnloadTexture(this.image)
