@@ -1,5 +1,6 @@
 import raylib
 import parallax
+import std/os
 
 InitWindow(320, 240, "Pakémon")
 InitAudioDevice()
@@ -17,8 +18,18 @@ var
 
 PlayMusicStream(music)
 
+var spawn = ""
+
 while not WindowShouldClose():
   UpdateMusicStream(music)
+
+  # example to show spawning another program
+  if IsKeyDown(KEY_SPACE):
+    spawn = "nim compile --path=src/lib --run --outdir:. src/pakemon.nim"
+    break
+
+  if IsKeyDown(KEY_ESCAPE):
+    break
   
   BeginDrawing()
   ClearBackground(BLACK)
@@ -40,5 +51,7 @@ UnloadMusicStream(music)
 layer1.unload()
 layer2.unload()
 layer3.unload()
-
 CloseWindow()
+
+if spawn != "":
+  discard execShellCmd(spawn)
