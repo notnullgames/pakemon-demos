@@ -16,7 +16,7 @@ I feel like I am endlessly evaluating stuff, and writing demos, so I am hoping t
 - [rust/macroquad](macroquad/) - [☢️](https://www.rust-lang.org/) 🐈 🌄 🕸️ 🥧
 - [node/raylib](node-raylib/) - [☕](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference) 🔊 🐈 🌄 🎬
 - [pygame](pygame/) - [🐍](https://www.python.org/) 🔊 🐈 🎬 🌄
-- [raylib](raylib/) - [💣](https://en.cppreference.com/w/c/language) 🔊 🌄 🎬 🕸️ 🥧
+- [raylib](raylib/) - [💣](https://en.cppreference.com/w/c/language) 🔊 🌄 🎬 🕸️ 🥧 🐈
 - [rust/raylib](raylib-rs/) - [☢️](https://www.rust-lang.org/) 🌄 🕸️
 - [sdl](sdl/) - [💣](https://en.cppreference.com/w/c/language) 🕸️ 🥧
 
