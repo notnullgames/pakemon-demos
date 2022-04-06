@@ -3,7 +3,7 @@
     "./src/main.ts"
   ],
   "options": {
-    "binaryFile": "build/pakemon.wasm",
+    "binaryFile": "build/cart.wasm",
     "runtime": "incremental",
     "importMemory": true,
     "initialMemory": 1,
@@ -25,7 +25,7 @@
     },
     "debug": {
       "debug": true,
-      "sourceMap": "http://localhost:4444/pakemon.wasm.map",
+      "sourceMap": "http://localhost:4444/cart.wasm.map",
       "use": "abort=src/wasm4/abortHandler"
     }
   }

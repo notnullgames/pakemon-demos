@@ -1,31 +1,41 @@
-import * as w4 from "./wasm4";
+import * as w4 from './wasm4'
 
-const smiley = memory.data<u8>([
-    0b11000011,
-    0b10000001,
-    0b00100100,
-    0b00100100,
-    0b00000000,
-    0b00100100,
-    0b10011001,
-    0b11000011,
-]);
+import { cat0000Width, cat0000Height, cat0000Flags, cat0000, cat0001, cat0002, cat0003, cat0004, cat0005 } from './cat'
 
-store<u32>(w4.PALETTE, 0xfff6d3, 0 * sizeof<u32>());
-store<u32>(w4.PALETTE, 0xf9a875, 1 * sizeof<u32>());
-store<u32>(w4.PALETTE, 0xeb6b6f, 2 * sizeof<u32>());
-store<u32>(w4.PALETTE, 0x7c3f58, 3 * sizeof<u32>());
+// build your sound here: https://wasm4.org/play/sound-demo
+function play(freq1:u16, freq2:u16, attack:u16, decay:u16, sustain:u16, release:u16, peakVolume:u16, sustainVolume:u16, channel:u16, mode:u8):void {
+  w4.tone(440 | (200 << 16), (attack << 24) | (decay << 16) | sustain | (release << 8), (peakVolume << 8) | sustainVolume, channel |(mode << 2))
+}
+
+const cat = [
+  cat0000,
+  cat0001,
+  cat0002,
+  cat0003,
+  cat0004,
+  cat0005
+]
+
+let frame = 0
+let time = 0
 
 export function update (): void {
-    store<u16>(w4.DRAW_COLORS, 0x40);
+  time += 1
 
-    w4.text("Hello from\nAssemblyScript!", 10, 10);
+  store<u16>(w4.DRAW_COLORS, 0x1320) // remap colors
+  w4.blit(cat[frame % cat.length], 60, 60, cat0000Width, cat0000Height, cat0000Flags)
 
-    const gamepad = load<u8>(w4.GAMEPAD1);
-    if (gamepad & w4.BUTTON_1) {
-        store<u16>(w4.DRAW_COLORS, 4);
+  const gamepad = load<u8>(w4.GAMEPAD1)
+  if (gamepad & w4.BUTTON_1) {
+    store<u16>(w4.DRAW_COLORS, 4)
+    play(440, 200, 48, 68, 16, 74, 46, 69, 0, 1)
+  } else {
+    store<u16>(w4.DRAW_COLORS, 3)
+    if (time % 10 === 0){
+      frame += 1
     }
+  }
 
-    w4.blit(smiley, 76, 76, 8, 8, w4.BLIT_1BPP);
-    w4.text("Press X to blink", 16, 90);
+  w4.text("Pakémon", 52, 50)
+  w4.text("Press X to purr", 20, 100)
 }
