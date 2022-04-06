@@ -2,6 +2,8 @@
 
 This is a simple demo of wasm4 engine. press "X" to purr.
 
+You can see it running [here](https://wasmcat.surge.sh/).
+
 
 ## development
 
