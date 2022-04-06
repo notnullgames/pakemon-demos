@@ -4,6 +4,10 @@
   "scripts": {
     "build": "asc --target release",
     "build:debug": "asc --target debug",
+    "build:site": "w4 bundle build/cart.wasm --title 'Pakémon' --html site/index.html",
+    "prebuild:site": "npm run build",
+    "deploy": "npx -y surge site wasmcat.surge.sh",
+    "predeploy": "npm run build:site",
     "start": "w4 watch build/cart.wasm",
     "image": "w4 png2src --assemblyscript assets/cat-2BPP.png -o /tmp/cat.ts && sed 's/const/export const/' /tmp/cat.ts > src/cat.ts"
   },
