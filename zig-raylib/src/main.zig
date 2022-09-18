@@ -1,3 +1,6 @@
+// TODO: look into f32 type-conversion for both draw() functions
+// TODO: seperate utils and scene
+
 const ray = @cImport({
     @cInclude("raylib.h");
 });
@@ -9,7 +12,6 @@ const ParallaxLayer = struct {
     speed: i32 = 10,
 
     pub fn draw(self: *ParallaxLayer) void {
-        // TODO: some kind of f32 math to allow smaller speed
         self.x = @mod(self.x + self.speed, self.texture.width);
         ray.DrawTexture(self.texture, self.x, self.y, ray.WHITE);
         ray.DrawTexture(self.texture, self.x - self.texture.width, self.y, ray.WHITE);
