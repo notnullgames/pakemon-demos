@@ -20,6 +20,7 @@ I feel like I am endlessly evaluating stuff, and writing demos, so I am hoping t
 - [rust/raylib](raylib-rs/) - [☢️](https://www.rust-lang.org/) 🌄 🕸️
 - [sdl](sdl/) - [💣](https://en.cppreference.com/w/c/language) 🕸️ 🥧
 - [nim/raylib-forevor](nim-raylib-forevor/) 🔊 🌄 🐈
+- [zig/raylib](zig-raylib/) - [🇿](https://ziglang.org/) 
 
 ## incomplete
 
@@ -50,6 +51,7 @@ This is just what I actually implemented in the demo, not if the language/framew
 - [☕](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference) - javascript-like (ES) language
 - [🐤](https://wren.io/) - wren
 - [🐍](https://www.python.org/) - python
+- [🇿](https://ziglang.org/) - zig
 
 
 ### networking
