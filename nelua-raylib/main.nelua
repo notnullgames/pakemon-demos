@@ -1,0 +1,18 @@
+require 'raylib'
+
+InitWindow(320, 240, "Pakémon")
+SetTargetFPS(60)
+
+local title = LoadTexture("assets/title.png")
+local texture = LoadTexture("assets/cat-run-right.png")
+
+local logoPositionY = 40.0;
+
+while not WindowShouldClose() do
+  BeginDrawing()
+  ClearBackground(BLACK)
+  DrawTexture(title, 80, logoPositionY, WHITE);
+  EndDrawing()
+end
+
+CloseWindow()

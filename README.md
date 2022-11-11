@@ -26,6 +26,7 @@ I feel like I am endlessly evaluating stuff, and writing demos, so I am hoping t
 
 I will maybe get around to these, eventually
 
+- [nelua/raylib](nelua-raylib/) - [🌙](https://www.lua.org/)
 - [python/kivy](py-kivy)
 - [wasm4](wasm4) - it's a cute demo, but not close to the other ones
 

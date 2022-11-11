@@ -1,0 +1,24 @@
+local StateIntro = {}
+
+-- called when this loads
+function StateIntro:load()
+end
+
+-- called when some other state is chosen
+function StateIntro:unload()
+end
+
+-- called to update logic
+function StateIntro:update(dt, totaltime)
+end
+
+-- called to draw current state
+function StateIntro:draw()
+  ClearBackground(BLACK)
+end
+
+-- called when a normalized button is pressed
+function StateIntro:pressed(button)
+end
+
+return StateIntro
